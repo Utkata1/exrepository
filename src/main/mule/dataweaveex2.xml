@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="ee121568-7f20-444f-b41b-e09afb649ee9" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="dataweaveex2Flow" doc:id="a0bb81fd-602c-413c-9abc-dc0f75db1af7" >
+		<http:listener doc:name="Listener" doc:id="a507abc2-752e-40bd-ab97-95506765139f" config-ref="HTTP_Listener_config" path="/dw2" allowedMethods="POST"/>
+		<logger level="INFO" doc:name="Logger" doc:id="9b8d6550-693a-4da4-8787-467e31559e31" />
+		<ee:transform doc:name="Transform Message" doc:id="eee1fa2c-58f5-4bae-b8e2-83c66a92b34c" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json skipNullOn="everywhere"
+---
+if (!isEmpty(payload.foods.food))
+(payload.foods.*food map(food, index) -> 
+	{
+		name:food.name,
+		price:(food.price replace '\$' with '') as Number as String {"format" : "00000.00"},
+		desc: if (sizeOf(food.desc)<=40) food.desc else null,
+		calories:food.calories
+		
+	}
+)
+else
+{
+	status: "Error",
+	message: "No Food details in the given request, please verify"
+}
+ ]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
+
+<!-- 
+
+skipNullOn
+Number format
+sizeOf
+if ..else
+
+ -->

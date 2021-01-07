@@ -33,9 +33,9 @@
 					     <password>Shaik123456</password>         
 					     <workers>1</workers>
 					     <workerType>MICRO</workerType>
-					     <environment>Sandbox</environment>
+					     <environment>SANDBOX</environment>
 					     <muleVersion>4.2.2</muleVersion>
-					     <applicationName>Demo-Application2</applicationName>
+					     <applicationName>Demo-Application3</applicationName>
 					</cloudHubDeployment>
 				</configuration>
 				

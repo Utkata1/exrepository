@@ -27,13 +27,15 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
+					<uri>https://anypoint.mulesoft.com</uri>
+					
 					      <username>nabis_id7</username>
 					     <password>Shaik123456</password>         
 					     <workers>1</workers>
-					     <workerType>Micro</workerType>
+					     <workerType>MICRO</workerType>
 					     <environment>Sandbox</environment>
 					     <muleVersion>4.2.2</muleVersion>
-					     <applicationName>Demo-Application</applicationName>
+					     <applicationName>Demo-Application2</applicationName>
 					</cloudHubDeployment>
 				</configuration>
 				

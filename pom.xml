@@ -36,6 +36,7 @@
 					     <environment>Sandbox</environment>
 					     <muleVersion>4.2.2</muleVersion>
 					     <applicationName>Demo-Application5</applicationName>
+					     <objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 				</configuration>
 				

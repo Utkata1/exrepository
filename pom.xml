@@ -27,13 +27,13 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-				 		<username>nabis_id7</username>
-				 		<password>Shaik12345</password>
-				 		<environment>Sandbox</environment>
-				 		<workers>1</workers>
-				 		<workerType>Micro</workerType>
-				 		<applcationName>SampleAPI-service</applcationName>
-				 		<muleVersion>4.2.2</muleVersion>
+					      <username>nabis_id7</username>
+					     <password>Shaik12345</password>         
+					     <workers>1</workers>
+					     <workerType>Micro</workerType>
+					     <environment>Sandbox</environment>
+					     <muleVersion>4.2.2</muleVersion>
+					     <applicationName>Demo-Application</applicationName>
 					</cloudHubDeployment>
 				</configuration>
 				

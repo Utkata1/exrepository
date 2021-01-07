@@ -33,7 +33,7 @@
 					     <password>Shaik123456</password>         
 					     <workers>1</workers>
 					     <workerType>MICRO</workerType>
-					     <environment>SANDBOX</environment>
+					     <environment>Sandbox</environment>
 					     <muleVersion>4.2.2</muleVersion>
 					     <applicationName>Demo-Application3</applicationName>
 					</cloudHubDeployment>

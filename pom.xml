@@ -28,7 +28,7 @@
 				<configuration>
 					<cloudHubDeployment>
 					      <username>nabis_id7</username>
-					     <password>Shaik12345</password>         
+					     <password>Shaik123456</password>         
 					     <workers>1</workers>
 					     <workerType>Micro</workerType>
 					     <environment>Sandbox</environment>

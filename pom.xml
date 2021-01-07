@@ -35,7 +35,7 @@
 					     <workerType>MICRO</workerType>
 					     <environment>Sandbox</environment>
 					     <muleVersion>4.2.2</muleVersion>
-					     <applicationName>Demo-Application3</applicationName>
+					     <applicationName>Demo-Application5</applicationName>
 					</cloudHubDeployment>
 				</configuration>
 				

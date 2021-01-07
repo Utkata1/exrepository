@@ -33,7 +33,7 @@
 				 		<workers>1</workers>
 				 		<workerType>Micro</workerType>
 				 		<applcationName>SampleAPI-service</applcationName>
-				 		<muleVersion>4.1.4</muleVersion>
+				 		<muleVersion>4.2.2</muleVersion>
 					</cloudHubDeployment>
 				</configuration>
 				
